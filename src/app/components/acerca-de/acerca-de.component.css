@@ -2,6 +2,7 @@
    padding:20px;
 }
 div{
+    background:#a1b5cb;
         text-align:center;
 }
 @media(min-width:576px){
@@ -11,7 +12,7 @@ width:15%;
 border-radius:100%;
 box-shadow:3px 3px 3px gray;
 left:3%;
-top:600px;
+top:770px;
 }
 }
 @media(max-width:575px){
@@ -21,7 +22,7 @@ top:600px;
     border-radius:100%;
     box-shadow:3px 3px 3px gray;
     left:33%;
-    top:490px;
+    top:800px;
     }
 }
 #nombre {
