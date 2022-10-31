@@ -3,8 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  firebase: {
+    projectId: 'wstfrontend',
+    appId: '1:139004436862:web:168c3e0473617235e3d32f',
+    storageBucket: 'wstfrontend.appspot.com',
+    locationId: 'southamerica-east1',
+    apiKey: 'AIzaSyBc7HbL6ynSxK4W3wvXABlHbi6Ac8lTIA8',
+    authDomain: 'wstfrontend.firebaseapp.com',
+    messagingSenderId: '139004436862',
+  },
+  production: false,
+  URL:'http://localhost:8080/'
+}
 
 /*
  * For easier debugging in development mode, you can import the following file
