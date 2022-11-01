@@ -9,5 +9,5 @@ export const environment = {
     messagingSenderId: '139004436862',
   },
   production: true,
-  URL:'https://wstfrontend.web.app'
+  URL:'https://backendwst.herokuapp.com/'
 };
