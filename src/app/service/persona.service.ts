@@ -7,22 +7,13 @@ import { persona } from '../model/persona.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonaService {
-URL = environment.URL + '/personas/';
-  constructor(private httpClient: HttpClient) { }
-  public lista(): Observable<persona[]>{
-    return this.httpClient.get<persona[]>(this.URL + 'lista');
+  URL = environment.URL + 'personas/';
+
+  constructor(private http: HttpClient) { }
+
+  public getPersona(): Observable<persona>{
+    return this.http.get<persona>(this.URL+ 'traer/perfil');
   }
-  public detail(id: number):Observable<persona>{
-    return this.httpClient.get<persona>(this.URL + 'detail/${id}');
-  }
- /* public save(Persona : persona):Observable<any>{
-  return this.httpClient.post<any>(this.URL + 'create', Persona);
-  }*/
-  public update(id: number, Persona: persona){
-    return this.httpClient.put<any>(this.URL +'update/${id}',Persona);
-  }
- /* public delete(id:number):Observable<any>{
-    return this.httpClient.delete<any>(this.URL + 'delete/${id}');
-  }*/
 }

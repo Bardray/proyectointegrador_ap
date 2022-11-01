@@ -10,12 +10,15 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-authURL = environment.URL + '/auth/'
+  URL = 'https://backendwst.herokuapp.com/auth/';
+
   constructor(private httpClient: HttpClient) { }
-  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.authURL + 'nuevo',nuevoUsuario);
-  }
-  public login(loginUsuario:LoginUsuario):Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.authURL + 'login',loginUsuario);
-  }
+
+ public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
+   return this.httpClient.post<any>(this.URL + 'nuevo', nuevoUsuario);
+ }
+
+ public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
+   return this.httpClient.post<JwtDto>(this.URL + 'login', loginUsuario)
+ }
 }

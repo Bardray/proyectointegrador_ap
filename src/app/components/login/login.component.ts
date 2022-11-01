@@ -31,8 +31,8 @@ onLogin():void{
    this.authService.login(this.loginUsuario).subscribe(
     data =>{this.isLogged=true;
     this.isLogginFail= false;
-  this.tokenService.SetToken(data.token);
-  this.tokenService.setUsername(data.nombreUsuario);
+  this.tokenService.setToken(data.token);
+  this.tokenService.setUserName(data.nombreUsuario);
   this.tokenService.setAuthorities(data.authorities);
   this.roles = data.authorities;
   this.router.navigate(['']);
